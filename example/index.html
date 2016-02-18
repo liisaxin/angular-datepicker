@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../src/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="../src/angular/angular.min.js"></script>
+	<script type="text/javascript" src="../src/datetimepicker/jquery.datetimepicker.js"></script>
+	<link rel="stylesheet" href="../src/datetimepicker/jquery.datetimepicker.css" type="text/css">
+	<script type="text/javascript" src="../src/Datetimepicker.js"></script>
+	<script type="text/javascript">
+
+
+		var app = angular.module('app', ['datetimepicker']);
+
+		app.controller('testCtrl', function($scope) {
+			
+		});
+
+
+	</script>
+</head>
+<body ng-app="app" ng-controller="testCtrl">
+		
+		{{test | json}}
+		<br />
+		<input type="text" datetimepicker ng-model="test.start_time" plugintype="datetime" placeholder="开始时间" class="date" /> ~ 
+		<input type="text" datetimepicker ng-model="test.end_time" plugintype="datetime" placeholder="结束时间" class="date" />
+	
+		<br /><br />
+		<input type="text" datetimepicker ng-model="test.time" plugintype="time" placeholder="时间" />
+		
+		<br /><br />
+		<input type="text" datetimepicker ng-model="test.date" plugintype="date" placeholder="日期" />
+
+</body>
+</html>
